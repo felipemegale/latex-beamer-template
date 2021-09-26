@@ -1,0 +1,177 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+    \usetheme{Pittsburgh}
+    \usecolortheme{seahorse}
+    %\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+    \setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+    \setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\usepackage{amssymb}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+%\usepackage {tikz}
+\usepackage{tkz-graph}
+\GraphInit[vstyle = Shade]
+\tikzset{
+  LabelStyle/.style = { rectangle, rounded corners, draw,
+                        minimum width = 2em, fill = yellow!50,
+                        text = red, font = \bfseries },
+  VertexStyle/.append style = { inner sep=5pt,
+                                font = \normalsize\bfseries},
+  EdgeStyle/.append style = {->, bend left} }
+\usetikzlibrary {positioning}
+%\usepackage {xcolor}
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Presentation title]{Presentation title} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Your name} 
+
+\institute[Institution for other slides]
+{
+    Institution for title slide \\
+    \medskip
+}
+
+%\date{\today} % Date, can be changed to a custom date
+\date{September 29, 2021}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage % Print the title page as the first slide
+\end{frame}
+
+\begin{frame}
+    \frametitle{Overview} % Table of contents slide, comment this block out to remove it
+    \tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+\section{Slide example 1}
+\begin{frame}{Slide example 1}
+    \begin{itemize}
+        \item Level 1 item
+        \begin{itemize}
+            \item Level 2 item
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\section{Math example}
+\begin{frame}{Use \$something\$ to get math symbols}
+    \begin{itemize}
+        \item Like so: $\phi$
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\section{Image example}
+\begin{frame}{Image example}
+    \begin{figure}
+        \centering
+        %\includegraphics[width=.9\textwidth]{imgs/fig1_a.jpg} % add an img that exists in imgs folder
+        \captionof{figure}{Figure caption}
+        \label{fig:1}
+    \end{figure}
+\end{frame}
+
+%------------------------------------------------
+
+\section{References}
+\begin{frame}
+    \frametitle{References}
+    \footnotesize{
+        \begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+            \bibitem[Author et al., YEAR]{p1} Authors full names and year
+            \newblock Work title
+            \newblock \emph{Where work was published} What Volume or Pages, publication date.
+        \end{thebibliography}
+    }
+\end{frame}
+
+%------------------------------------------------
+% Thank you slide
+\begin{frame}
+\Huge{\centerline{Thanks!}}
+\end{frame}
+
+%------------------------------------------------
+
+\end{document}
+
+%------------------------------------------------
+
+%\begin{frame}
+%\frametitle{Multiple Columns}
+%\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+%\column{.45\textwidth} % Left column and width
+%\textbf{Heading}
+%\begin{enumerate}
+%\item Statement
+%\item Explanation
+%\item Example
+%\end{enumerate}
+
+%\column{.5\textwidth} % Right column and width
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+
+%\end{columns}
+%\end{frame}
+
+%------------------------------------------------
+%\section{Second Section}
+%------------------------------------------------
+
+%\begin{frame}
+%\frametitle{Table}
+%\begin{table}
+%\begin{tabular}{l l l}
+%\toprule
+%\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+%\midrule
+%Treatment 1 & 0.0003262 & 0.562 \\
+%Treatment 2 & 0.0015681 & 0.910 \\
+%Treatment 3 & 0.0009271 & 0.296 \\
+%\bottomrule
+%\end{tabular}
+%\caption{Table caption}
+%\end{table}
+%\end{frame}
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
